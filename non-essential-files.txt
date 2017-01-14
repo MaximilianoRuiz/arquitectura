@@ -1,0 +1,11 @@
+
+
+.travis.yml
+*.spec*.ts
+
+
+
+
+
+non-essential-files.txt
+
