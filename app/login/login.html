@@ -1,29 +1,60 @@
-<ngb-tabset>
-  <ngb-tab title="Simple">
-    <template ngbTabContent>
-      <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-      master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
-      dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
-      iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-    </template>
-  </ngb-tab>
-  <ngb-tab>
-    <template ngbTabTitle><b>Fancy</b> title</template>
-    <template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-      <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
-      craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
-      cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-      yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
-      shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
-      sint qui sapiente accusamus tattooed echo park.</p>
-    </template>
-  </ngb-tab>
-  <ngb-tab title="Disabled" [disabled]="true">
-    <template ngbTabContent>
-      <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-      master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
-      dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
-      iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-    </template>
-  </ngb-tab>
-</ngb-tabset>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 panel panel-default">
+      <ngb-tabset class="panel-body">
+        <ngb-tab>
+          <template ngbTabTitle>Login</template>
+          <template ngbTabContent>
+            <br/>
+            <div class="form-group">
+              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn btn-primary" value="Log In">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Forgot Password?">
+                </div>
+              </div>
+            </div>
+          </template>
+        </ngb-tab>
+        <ngb-tab>
+          <template ngbTabTitle>Register</template>
+          <template ngbTabContent>
+            <br/>
+            <div class="form-group">
+              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn btn-primary" value="Register Now">
+                </div>
+              </div>
+            </div>
+          </template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+</div>
+

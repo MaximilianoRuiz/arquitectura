@@ -2,14 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'login-component',
-  template: '<h1>Hola</h1>',
-  styles: [`
-    	h1 {
-  			color: #369;
-  			font-family: Arial, Helvetica, sans-serif;
-  			font-size: 250%;
-		}
-  `],
+  templateUrl: 'app/login/login.html',
+  styleUrls: ['app/login/login.html'],
 })
 
 export class LoginComponent  {

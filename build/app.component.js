@@ -11,38 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        var _this = this;
         this.name = 'Angular';
-        this.resetTimer();
-        setInterval(function () { return _this.tick(); }, 1000);
     }
-    AppComponent.prototype.resetTimer = function () {
-        this.min = 24;
-        this.seg = 59;
-        this.buttonLabel = "Empezar";
-        this.tooglePause();
-    };
-    AppComponent.prototype.tick = function () {
-        if (!this.isPaused) {
-            this.buttonLabel = "Detener";
-            if (--this.seg < 0) {
-                this.seg = 59;
-                if (--this.min < 0) {
-                    this.resetTimer();
-                }
-            }
-        }
-    };
-    AppComponent.prototype.tooglePause = function () {
-        this.isPaused = !this.isPaused;
-        if (this.min < 24 || this.seg < 59) {
-            this.buttonLabel = this.isPaused ? "Reanudar" : "Pausar";
-        }
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  \t\t\t<h1>Hello {{name}}</h1>\n  \t\t\t<h2>{{min}}:{{seg}}</h2>\n  \t\t\t<p>\n  \t\t\t\t<button (click)=\"tooglePause()\">\n  \t\t\t\t\t{{buttonLabel}}\n  \t\t\t\t</button>\n  \t\t\t</p>\n  \t\t\t<login-component></login-component>\n  \t\t\t",
+            templateUrl: 'app/app.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

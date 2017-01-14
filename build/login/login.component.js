@@ -16,8 +16,8 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'login-component',
-            template: '<h1>Hola</h1>',
-            styles: ["\n    \th1 {\n  \t\t\tcolor: #369;\n  \t\t\tfont-family: Arial, Helvetica, sans-serif;\n  \t\t\tfont-size: 250%;\n\t\t}\n  "],
+            templateUrl: 'app/login/login.html',
+            styleUrls: ['app/login/login.html'],
         }), 
         __metadata('design:paramtypes', [])
     ], LoginComponent);

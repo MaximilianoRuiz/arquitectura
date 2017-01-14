@@ -16,7 +16,7 @@ var LoginModule = (function () {
     }
     LoginModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule,],
+            imports: [common_1.CommonModule],
             declarations: [login_component_1.LoginComponent]
         }), 
         __metadata('design:paramtypes', [])
