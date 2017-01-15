@@ -1,21 +1,37 @@
 <div class="container">
   <div class="row">
+    <img src="../../resource/user.png" class="img-responsive center-block" alt="Cinque Terre">
+    <div class="container" *ngIf="isRequirementsShows">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" aria-label="Close" (click)="closeAlerts()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <p *ngFor="let req of requirenments">
+            {{req}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="col-md-6 col-md-offset-3 panel panel-default">
       <ngb-tabset class="panel-body">
         <ngb-tab>
-          <template ngbTabTitle>Login</template>
+          <template ngbTabTitle onclick="">Login</template>
           <template ngbTabContent>
             <br/>
             <div class="form-group">
-              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+              <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" [(ngModel)]="email">
             </div>
             <div class="form-group">
-              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" [(ngModel)]="password">
             </div>
             <div class="form-group">
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn btn-primary" value="Log In">
+                  <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn btn-primary" 
+                         (click)="checkLoginForm()" value="Log In">
                 </div>
               </div>
             </div>
@@ -33,28 +49,34 @@
           <template ngbTabContent>
             <br/>
             <div class="form-group">
-              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+              <input type="text" name="first-name" id="first-name" tabindex="1" class="form-control" placeholder="First Name"[(ngModel)]="firstName">
             </div>
             <div class="form-group">
-              <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+              <input type="text" name="last-name" id="last-name" tabindex="1" class="form-control" placeholder="Last Name" [(ngModel)]="lastName">
             </div>
             <div class="form-group">
-              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+              <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" [(ngModel)]="email">
             </div>
             <div class="form-group">
-              <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" [(ngModel)]="password">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password-repeated" id="password-repeated" tabindex="2" class="form-control" placeholder="Repeat Password" [(ngModel)]="passwordRepeated">
             </div>
             <div class="form-group">
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn btn-primary" value="Register Now">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn btn-primary" 
+                         (click)="checkRegisterForm()" value="Register Now">
                 </div>
               </div>
             </div>
           </template>
         </ngb-tab>
       </ngb-tabset>
+      <div *ngIf="isLoginSuccesss" class="alert alert-success alert-dismissible" role="alert">
+        Process Success!
+      </div>
     </div>
   </div>
 </div>
-
