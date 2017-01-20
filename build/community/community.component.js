@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var CommunityComponent = (function () {
+    function CommunityComponent() {
     }
-    AppComponent = __decorate([
+    CommunityComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css']
+            selector: 'community-component',
+            templateUrl: 'app/community/community.html',
+            styleUrls: ['app/community/community.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CommunityComponent);
+    return CommunityComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CommunityComponent = CommunityComponent;
+//# sourceMappingURL=community.component.js.map
